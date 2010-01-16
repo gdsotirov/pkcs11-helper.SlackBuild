@@ -1,0 +1,13 @@
+pkcs11-helper: pkcs11-helper (library for interaction with PKCS#11 providers)
+pkcs11-helper:
+pkcs11-helper: pkcs11-helper is a library that simplifies the interaction
+pkcs11-helper: with PKCS#11 providers for end-user applications.
+pkcs11-helper: libpkcs11-helper allows using multiple PKCS#11 providers at
+pkcs11-helper: the same time, enumerating available token certificates, or
+pkcs11-helper: selecting a certificate directly by serialized id, handling
+pkcs11-helper: card removal and card insert events, handling card re-insert
+pkcs11-helper: to a different slot, supporting session expiration and much
+pkcs11-helper: more all using a simple API.
+pkcs11-helper: libpkcs11-helper is not designed to manage card content,
+pkcs11-helper: since object attributes are usually vendor specific
+pkcs11-helper: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
