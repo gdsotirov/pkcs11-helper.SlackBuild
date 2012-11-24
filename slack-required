@@ -1,6 +1,6 @@
-glibc-solibs >= 2.9
-gnutls >= 2.6.6
-libgcrypt >= 1.4.4
-libgpg-error >= 1.7
-openssl >= 0.9.8k | openssl-solibs >= 0.9.8k
-zlib >= 1.2.3
+glibc-solibs >= 2.13
+gnutls >= 2.10.5
+libgcrypt >= 1.4.6
+libgpg-error >= 1.9
+openssl >= 0.9.8x | openssl-solibs >= 0.9.8x
+zlib >= 1.2.5
