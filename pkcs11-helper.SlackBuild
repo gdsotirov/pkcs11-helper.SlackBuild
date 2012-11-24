@@ -1,12 +1,31 @@
 #!/bin/sh
+#
 # Slackware build script for PKCS#11 Helper
-# Written by: Georgi D. Sotirov <gdsotirov@dir.bg>
+# Copyright (C) 2010-2012 Georgi D. Sotirov <gdsotirov@dir.bg>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#
+# Visit SlackPack at http://sotirov-bg.net/slackpack/
+#
+# $Id: pkcs11-helper.SlackBuild,v 1.2 2012/11/24 14:01:32 gsotirov Exp $
 #
 
-. ../slack-package.conf
+. ../../slack-package.conf
 
 NAME=pkcs11-helper
-VERSION=1.07
+VERSION=1.09
 ARCH=${ARCH:-i486}
 BUILD=${BUILD:-1}
 
@@ -33,7 +52,7 @@ mkdir -p $PKG
 
 # Extract and fix source
 cd $TMP
-tar xvf $CWD/$NAME-$VERSION.tar.bz2
+tar xvf $CWD/$NAME-$VERSION.tar.bz2 || exit 3
 cd $SRC
 fix_source
 
@@ -49,13 +68,11 @@ CXXFLAGS="$SLCKCFLAGS" \
             --docdir=/usr/doc/$NAME-$VERSION \
             --enable-doc \
             --enable-shared=yes \
-            --enable-static=no || exit 1
+            --enable-static=no || exit 4
 
-# Build & test
-make -j4  || exit 2
-
-# Install
-make DESTDIR=$PKG install || exit 3
+# Build & install
+make -j4  || exit 5
+make DESTDIR=$PKG install || exit 6
 
 # Prepare
 bin_perms $PKG
