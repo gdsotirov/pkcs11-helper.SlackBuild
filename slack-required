@@ -1,9 +1,8 @@
-cxxlibs >= 6.0.17 | gcc-g++ >= 4.7.1
-gcc >= 4.7.1
-glibc-solibs >= 2.15
-gmp >= 5.1
-gnutls >= 3.0.23
-nettle >= 2.5
-openssl >= 1.0.1c | openssl-solibs >= 1.0.1c
-sqlite >= 3.7.13
-zlib >= 1.2.6
+glibc-solibs >= 2.17
+gmp >= 6.0
+gnutls >= 3.1.16
+mozilla-nss >= 3.15
+nettle >= 2.7.1
+openssl >= 1.0.1e | openssl-solibs >= 1.0.1e
+sqlite >= 3.7.17
+zlib >= 1.2.8
