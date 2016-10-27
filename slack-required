@@ -1,6 +1,9 @@
-glibc-solibs >= 2.13
-gnutls >= 2.10.5
-libgcrypt >= 1.4.6
-libgpg-error >= 1.9
-openssl >= 0.9.8x | openssl-solibs >= 0.9.8x
-zlib >= 1.2.5
+cxxlibs >= 6.0.17 | gcc-g++ >= 4.7.1
+gcc >= 4.7.1
+glibc-solibs >= 2.15
+gmp >= 5.1
+gnutls >= 3.0.23
+nettle >= 2.5
+openssl >= 1.0.1c | openssl-solibs >= 1.0.1c
+sqlite >= 3.7.13
+zlib >= 1.2.6
