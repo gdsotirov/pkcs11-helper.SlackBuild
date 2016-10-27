@@ -3,10 +3,10 @@
 # Written by: Georgi D. Sotirov <gdsotirov@dir.bg>
 #
 
-. ../slack-package.conf
+. ../../slack-package.conf
 
 NAME=pkcs11-helper
-VERSION=1.07
+VERSION=1.08
 ARCH=${ARCH:-i486}
 BUILD=${BUILD:-1}
 
@@ -33,7 +33,7 @@ mkdir -p $PKG
 
 # Extract and fix source
 cd $TMP
-tar xvf $CWD/$NAME-$VERSION.tar.bz2
+tar xvf $CWD/$NAME-$VERSION.tar.?z* || exit 3
 cd $SRC
 fix_source
 
@@ -43,19 +43,19 @@ CXXFLAGS="$SLCKCFLAGS" \
 ./configure --build=$ARCH-slackware-linux \
             --host=$ARCH-slackware-linux \
             --prefix=/usr \
+            --libdir=/usr/lib${LIBDIRSUFFIX} \
             --sysconfdir=/etc \
             --localstatedir=/var \
             --mandir=/usr/man \
             --docdir=/usr/doc/$NAME-$VERSION \
             --enable-doc \
             --enable-shared=yes \
-            --enable-static=no || exit 1
+            --enable-static=no || exit 5
 
-# Build & test
-make -j4  || exit 2
-
+# Build
+make -j4 || exit 6
 # Install
-make DESTDIR=$PKG install || exit 3
+make DESTDIR=$PKG install || exit 7
 
 # Prepare
 bin_perms $PKG
