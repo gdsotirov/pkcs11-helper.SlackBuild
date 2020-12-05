@@ -10,4 +10,4 @@ pkcs11-helper: to a different slot, supporting session expiration and much
 pkcs11-helper: more all using a simple API.
 pkcs11-helper: libpkcs11-helper is not designed to manage card content,
 pkcs11-helper: since object attributes are usually vendor specific
-pkcs11-helper: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
+pkcs11-helper: Packaged by Georgi D. Sotirov <gdsotirov@gmail.com>
