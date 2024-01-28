@@ -82,15 +82,20 @@ create_docs $PKG ${NAME}-${VERSION}
 
 # Install script
 install --mode 755 --directory $PKG/install
-install --mode 644 $CWD/slack-desc     $PKG/install/slack-desc
-install --mode 644 $CWD/slack-required $PKG/install/slack-required
+install --mode 644 --preserve-timestamps \
+        $CWD/slack-desc     $PKG/install/slack-desc
+install --mode 644 --preserve-timestamps \
+        $CWD/slack-required $PKG/install/slack-required
 
 # Include build information
 SBDIR=$PKG/usr/src/slackbuilds/${NAME}-${VERSION}
 install --mode 755 --directory $SBDIR
-install --mode 644 $CWD/slack-desc         $SBDIR/slack-desc
-install --mode 644 $CWD/slack-required     $SBDIR/slack-required
-install --mode 644 $CWD/${NAME}.SlackBuild $SBDIR/${NAME}.SlackBuild
+install --mode 644 --preserve-timestamps \
+        $CWD/slack-desc         $SBDIR/slack-desc
+install --mode 644 --preserve-timestamps \
+        $CWD/slack-required     $SBDIR/slack-required
+install --mode 644 --preserve-timestamps \
+        $CWD/${NAME}.SlackBuild $SBDIR/${NAME}.SlackBuild
 
 # Build package:
 cd $PKG
