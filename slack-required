@@ -1,14 +1,17 @@
-gcc >= 5.3.0
-gcc-g++ >= 5.3.0
-glibc-solibs >= 2.23
-gmp >= 6.1
-gnutls >= 3.4.13
-icu4c >= 56.1
-libffi >= 3.2.1
-libidn >= 1.30
-mozilla-nss >= 3.23
-nettle >= 3.2
-openssl >= 1.0.2h | openssl-solibs >= 1.0.2h
-p11-kit >= 0.23.2
-sqlite >= 3.13.0
-zlib >= 1.2.8
+aaa_glibc-solibs >= 2.33
+brotli >= 1.0.9
+gcc >= 11.2.0
+gcc-g++ >= 11.2.0
+gmp >= 6.2.1
+gnutls >= 3.7.2
+icu4c >= 69.1
+libffi >= 3.3
+libidn2 >= 2.3.2
+libunistring >= 0.9.10
+mozilla-nss >= 3.74
+nettle >= 3.7.3
+openssl >= 1.1.1m | openssl-solibs >= 1.1.1m
+p11-kit >= 0.24.1
+sqlite >= 3.37.2
+zlib >= 1.2.11
+zstd >= 1.5.2
